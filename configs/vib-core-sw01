@@ -41,9 +41,9 @@
 !
 !Flash: Directory of flash:/
 !Flash:        -rwx    12746112   Jan 1 1970 00:38:06 +00:00  c3560-ipservicesk9-mz.122-55.SE12.bin
-!Flash:        -rwx        5193   Mar 1 1993 00:01:37 +00:00  config.text
+!Flash:        -rwx        5220   Mar 2 1993 00:39:30 +00:00  config.text
 !Flash:        -rwx        1389   Mar 1 1993 00:09:06 +00:00  config.text.renamed
-!Flash:        -rwx        5501   Mar 1 1993 00:01:37 +00:00  private-config.text
+!Flash:        -rwx        5501   Mar 2 1993 00:39:30 +00:00  private-config.text
 !Flash:        -rwx          24   Mar 1 1993 00:09:06 +00:00  private-config.text.renamed
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (18 MB free)
@@ -222,6 +222,7 @@ vlan internal allocation policy ascending
 ip ssh version 2
 !
 interface GigabitEthernet0/1
+ description VIB-BACCKUP01
  switchport access vlan 20
  switchport mode access
 !
