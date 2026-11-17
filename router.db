@@ -1,2 +1,6 @@
 VIB-CORE-SW01;cisco;up
 VIB-CORE-SW02;cisco;up
+VIB-ACCESS-SW01;cisco;up
+VIB-ACCESS-SW02;cisco;up
+RAN-ACCESS-SW01;cisco;up
+RAN-ACCESS-SW02;cisco;up

@@ -1,0 +1,303 @@
+!RANCID-CONTENT-TYPE: cisco
+!
+!Chassis type: WS-C2960-24TC-L
+!CPU: PowerPC405
+!
+!Memory: main 65536K
+!Serial Number: FOC1514V0RP
+!Model revision number           : L0
+!Model number                    : WS-C2960-24TC-L
+!Motherboard assembly number     : 73-12599-05
+!Motherboard serial number       : FOC15126ABH
+!Motherboard revision number     : A0
+!Power supply part number        : 341-0097-03
+!Power supply serial number      : DCA1511810P
+!
+!Processor ID: FOC1514V0RP
+!
+!Power: RPS is NOT PRESENT
+!FAN: FAN is OK
+!
+!Image: Software: C2960-LANBASEK9-M, 12.2(55)SE12, RELEASE SOFTWARE (fc2)
+!Image: Compiled: Thu 28-Sep-17 02:53 by prod_rel_team
+!Image: flash:/c2960-lanbasek9-mz.122-55.SE12/c2960-lanbasek9-mz.122-55.SE12.bin
+!
+!BOOTLDR: Version 12.2(53r)SEY3, RELEASE SOFTWARE (fc1)
+!
+!
+!Variable: BOOT path-list      : 
+!Variable: Config file         : flash:/config.text
+!Variable: Private Config file : flash:/private-config.text
+!Variable: Enable Break        : no
+!Variable: Manual Boot         : no
+!Variable: HELPER path-list    : 
+!Variable: Auto upgrade        : yes
+!Variable: Auto upgrade path   : 
+!Variable: NVRAM/Config file
+!Variable:       buffer size:   65536
+!Variable: Timeout for Config
+!Variable:           Download:    0 seconds
+!Variable: Config Download 
+!Variable:        via DHCP:       disabled (next boot: disabled)
+!
+!Flash: Directory of flash:/
+!Flash:        -rwx        7779   Aug 3 2017 12:45:54 +00:00  175d-1caa.07bf.b680.tmp
+!Flash:        drwx          64   Jan 1 1970 00:27:55 +00:00  c2960-lanbasek9-mz.122-55.SE12
+!Flash:        drwx          64   Mar 1 1993 02:24:48 +00:00  c2960-lanbasek9-mz.150-2.SE4
+!Flash:        -rwx        2364   Mar 1 1993 22:00:53 +00:00  config.text
+!Flash:        -rwx        1224   Mar 1 1993 20:44:34 +00:00  express_setup.debug
+!Flash:        -rwx        5493   Mar 1 1993 22:00:53 +00:00  private-config.text
+!Flash:        -rwx        1228   Mar 8 1993 00:05:58 +00:00  stard
+!Flash:        -rwx                                           vlan.dat
+!Flash: 32514048 bytes total (17 MB free)
+!
+!Flash: nvram: Directory of nvram:/
+!Flash: nvram: -rw-         586                    <no date>  IOS-Self-Sig#3838.cer
+!Flash: nvram: -rw-         600                    <no date>  IOS-Self-Sig#3839.cer
+!Flash: nvram: -rw-           0                    <no date>  ifIndex-table
+!Flash: nvram: ----          35                    <no date>  persistent-data
+!Flash: nvram: ----                                <no date>  private-config
+!Flash: nvram: -rw-                                <no date>  startup-config
+!Flash: nvram: 64 KB total (81% free)
+!
+!NAME: "1",                     DESCR: "WS-C2960-24TC-L"
+!PID: WS-C2960-24TC-L
+!VID: V09
+!SN: FOC1514V0RP
+!NAME: "WS-C2960-24TC-L - Power Supply 0", DESCR: "WS-C2960-24TC-L - Power Supply 0"
+!SN: DCA1511810P
+!NAME: "WS-C2960-24TC-L - Fan 0", DESCR: "WS-C2960-24TC-L - Fan 0"
+!NAME: "WS-C2960-24TC-L - Fixed Module 0", DESCR: "WS-C2960-24TC-L - Fixed Module 0"
+!NAME: "GigabitEthernet0/1 Container", DESCR: "GigabitEthernet Container"
+!NAME: "GigabitEthernet0/1",    DESCR: "GigabitEthernet0/1"
+!NAME: "GigabitEthernet0/2 Container", DESCR: "GigabitEthernet Container"
+!NAME: "GigabitEthernet0/2",    DESCR: "GigabitEthernet0/2"
+!NAME: "FastEthernet0/1",       DESCR: "FastEthernet0/1"
+!NAME: "FastEthernet0/2",       DESCR: "FastEthernet0/2"
+!NAME: "FastEthernet0/3",       DESCR: "FastEthernet0/3"
+!NAME: "FastEthernet0/4",       DESCR: "FastEthernet0/4"
+!NAME: "FastEthernet0/5",       DESCR: "FastEthernet0/5"
+!NAME: "FastEthernet0/6",       DESCR: "FastEthernet0/6"
+!NAME: "FastEthernet0/7",       DESCR: "FastEthernet0/7"
+!NAME: "FastEthernet0/8",       DESCR: "FastEthernet0/8"
+!NAME: "FastEthernet0/9",       DESCR: "FastEthernet0/9"
+!NAME: "FastEthernet0/10",      DESCR: "FastEthernet0/10"
+!NAME: "FastEthernet0/11",      DESCR: "FastEthernet0/11"
+!NAME: "FastEthernet0/12",      DESCR: "FastEthernet0/12"
+!NAME: "FastEthernet0/13",      DESCR: "FastEthernet0/13"
+!NAME: "FastEthernet0/14",      DESCR: "FastEthernet0/14"
+!NAME: "FastEthernet0/15",      DESCR: "FastEthernet0/15"
+!NAME: "FastEthernet0/16",      DESCR: "FastEthernet0/16"
+!NAME: "FastEthernet0/17",      DESCR: "FastEthernet0/17"
+!NAME: "FastEthernet0/18",      DESCR: "FastEthernet0/18"
+!NAME: "FastEthernet0/19",      DESCR: "FastEthernet0/19"
+!NAME: "FastEthernet0/20",      DESCR: "FastEthernet0/20"
+!NAME: "FastEthernet0/21",      DESCR: "FastEthernet0/21"
+!NAME: "FastEthernet0/22",      DESCR: "FastEthernet0/22"
+!NAME: "FastEthernet0/23",      DESCR: "FastEthernet0/23"
+!NAME: "FastEthernet0/24",      DESCR: "FastEthernet0/24"
+!
+!VTP: VTP Version capable             : 1 to 3
+!VTP: VTP version running             : 1
+!VTP: VTP Domain Name                 : 
+!VTP: VTP Pruning Mode                : Disabled
+!VTP: VTP Traps Generation            : Disabled
+!VTP: Device ID                       : 1caa.07bf.b680
+!VTP: Local updater ID is 10.2.99.4 on interface Vl99 (lowest numbered VLAN interface found)
+!VTP: Feature VLAN:
+!VTP: --------------
+!VTP: VTP Operating Mode                : Server
+!VTP: Maximum VLANs supported locally   : 255
+!VTP: Number of existing VLANs          : 10
+!VTP: Configuration Revision            : 5
+!VTP: MD5 digest                        : 0xDF 0x23 0xFB 0x32 0xF2 0x20 0xE1 0x16 
+!VTP:                                     0xAC 0xC2 0xF2 0x6F 0x57 0x9C 0x2C 0xC7 
+!
+!DOT1x: Sysauthcontrol             Disabled
+!DOT1x: Dot1x Protocol Version            3
+!
+!VLAN: VLAN Name                             Status    Ports
+!VLAN: ---- -------------------------------- --------- -------------------------------
+!VLAN: 1    default                          active    Fa0/3, Fa0/5, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11, Fa0/12, Fa0/13, Fa0/14, Fa0/15
+!VLAN:                                                 Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21, Fa0/22, Fa0/23
+!VLAN: 10   Klient                           active    Fa0/1
+!VLAN: 20   server                           active    Fa0/2, Fa0/24
+!VLAN: 30   iot                              active    Fa0/4
+!VLAN: 40   guest                            active    Fa0/6
+!VLAN: 99   management                       active    
+!VLAN: 1002 fddi-default                     act/unsup 
+!VLAN: 1003 token-ring-default               act/unsup 
+!VLAN: 1004 fddinet-default                  act/unsup 
+!VLAN: 1005 trnet-default                    act/unsup 
+!VLAN: VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+!VLAN: ---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+!VLAN: 1    enet  100001     1500  -      -      -        -    -        0      0   
+!VLAN: 10   enet  100010     1500  -      -      -        -    -        0      0   
+!VLAN: 20   enet  100020     1500  -      -      -        -    -        0      0   
+!VLAN: 30   enet  100030     1500  -      -      -        -    -        0      0   
+!VLAN: 40   enet  100040     1500  -      -      -        -    -        0      0   
+!VLAN: 99   enet  100099     1500  -      -      -        -    -        0      0   
+!VLAN: 1002 fddi  101002     1500  -      -      -        -    -        0      0   
+!VLAN: 1003 tr    101003     1500  -      -      -        -    -        0      0   
+!VLAN: 1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+!VLAN: 1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+!VLAN: Remote SPAN VLANs
+!VLAN: ------------------------------------------------------------------------------
+!VLAN: Primary Secondary Type              Ports
+!VLAN: ------- --------- ----------------- ------------------------------------------
+!
+!SDM Template: default
+!
+!MTU: 1500
+!MTU-Jumbo: 1500
+!MTU-Routing: 1500
+!
+!
+config-register 0xF
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname RAN-ACCESS-SW01
+!
+boot-start-marker
+boot-end-marker
+!
+username ase secret 5 $1$IGgI$MH8JGNXxLlngNTUkfox0r/
+!
+aaa new-model
+!
+aaa group server radius nps
+ server-private 10.1.20.5 auth-port 1812 acct-port 1813 key dsgtfgthguLKFE.
+!
+aaa authentication login default group nps local
+aaa authorization exec default group nps local 
+!
+aaa session-id common
+system mtu routing 1500
+!
+ip domain-name aserrest.local
+!
+crypto pki trustpoint TP-self-signed-130004608
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-130004608
+ revocation-check none
+ rsakeypair TP-self-signed-130004608
+!
+crypto pki certificate chain TP-self-signed-130004608
+ certificate self-signed 01
+  30820254 308201BD A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31333030 30343630 38301E17 0D393330 33303130 30303134 
+  325A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3133 30303034 
+  36303830 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100 
+  CA6D7761 EA8E2C77 5F4953E7 0C78DEE4 C83CBC7F E13000EB 96AC4D76 5A00F628 
+  BF8F0003 0A7E9034 B96EB1C9 5981DB46 2B88774A 8BB4EE19 B4445E21 484C4714 
+  C2EC7B0A DEE606D4 AD1E7D29 1E58583A ADC779F2 D4F3D888 9F456E1F F9D420AB 
+  8F273BDC 3A744527 13A0DD3F 28DEAE47 B155FC39 0B8AAB99 60600F25 253A8EEB 
+  02030100 01A37E30 7C300F06 03551D13 0101FF04 05300301 01FF3029 0603551D 
+  11042230 20821E52 414E2D41 43434553 532D5357 30312E61 73657272 6573742E 
+  6C6F6361 6C301F06 03551D23 04183016 80140FAD 0929FBC2 1E36D2D7 DA19B649 
+  6C782C96 8C3B301D 0603551D 0E041604 140FAD09 29FBC21E 36D2D7DA 19B6496C 
+  782C968C 3B300D06 092A8648 86F70D01 01040500 03818100 ACC0A3B3 37AF4BB0 
+  2530CC29 B15CF93B CD834446 79B75D67 EC5C7A03 37D4DF59 457A30C2 F1C82C14 
+  7D4D1329 14D612FF 7EF6A927 B796E537 75C7905D 64987C9A B29EF188 EADF60CD 
+  7B8D5A16 C6DAB61E 6866ED6D F7FB5C00 92C6111F 1A7E7451 D4C604DC 7593052D 
+  61A4F6DC 307867E9 0E84E19C F2EB1FFB BA573125 608DF296
+  quit
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+ip ssh version 2
+!
+interface FastEthernet0/1
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/2
+ switchport access vlan 20
+ spanning-tree portfast
+!
+interface FastEthernet0/3
+ spanning-tree portfast
+!
+interface FastEthernet0/4
+ switchport access vlan 30
+ spanning-tree portfast
+!
+interface FastEthernet0/5
+ spanning-tree portfast
+!
+interface FastEthernet0/6
+ switchport access vlan 40
+ spanning-tree portfast
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+ switchport access vlan 20
+!
+interface GigabitEthernet0/1
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan99
+ ip address 10.2.99.4 255.255.255.0
+!
+ip default-gateway 10.2.99.1
+ip http server
+ip http secure-server
+snmp-server community ZabbixHallu! RO
+vstack
+!
+line con 0
+line vty 0 4
+ transport input ssh
+line vty 5 15
+!
+end

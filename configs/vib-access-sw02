@@ -1,0 +1,700 @@
+!RANCID-CONTENT-TYPE: cisco
+!
+!Chassis type: WS-C2960-48TT-L
+!CPU: PowerPC405
+!
+!Memory: main 65536K
+!Serial Number: FOC1041X3FU
+!Model revision number           : B0
+!Model number                    : WS-C2960-48TT-L
+!Motherboard assembly number     : 73-10391-03
+!Motherboard serial number       : FOC10403450
+!Motherboard revision number     : C0
+!Power supply part number        : 341-0097-02
+!Power supply serial number      : DCA103255K3
+!
+!Processor ID: FOC1041X3FU
+!
+!Power: RPS is NOT PRESENT
+!FAN: FAN is OK
+!
+!Image: Software: C2960-LANBASEK9-M, 15.0(2)SE9, RELEASE SOFTWARE (fc1)
+!Image: Compiled: Tue 01-Dec-15 07:07 by prod_rel_team
+!Image: flash:c2960-lanbasek9-mz.150-2.SE9.bin
+!
+!BOOTLDR: Version 12.2(25r)SEE1, RELEASE SOFTWARE (fc1)
+!
+!
+!Variable: BOOT path-list      : flash:c2960-lanbasek9-mz.150-2.SE9.bin
+!Variable: Config file         : flash:/config.text
+!Variable: Private Config file : flash:/private-config.text
+!Variable: Enable Break        : no
+!Variable: Manual Boot         : no
+!Variable: Allow Dev Key         : yes
+!Variable: HELPER path-list    : 
+!Variable: Auto upgrade        : yes
+!Variable: Auto upgrade path   : 
+!Variable: NVRAM/Config file
+!Variable:       buffer size:   65536
+!Variable: Timeout for Config
+!Variable:           Download:    0 seconds
+!Variable: Config Download 
+!Variable:        via DHCP:       disabled (next boot: disabled)
+!
+!Flash: Directory of flash:/
+!Flash:        drwx         192   Mar 1 1993 01:06:21 +01:00  c2960-lanbase-mz.122-25.SEE2
+!Flash:        -rwx    11831020   Mar 1 1993 04:24:53 +01:00  c2960-lanbasek9-mz.150-2.SE9.bin
+!Flash:        -rwx       13397   Mar 1 1993 22:46:23 +01:00  config.text
+!Flash:        -rwx        1959   Mar 1 1993 01:06:01 +01:00  express_setup.debug
+!Flash:        drwx          64   Jan 1 1970 01:00:09 +01:00  lost+found
+!Flash:        -rwx       15888   Mar 1 1993 22:46:23 +01:00  private-config.text
+!Flash:        -rwx                                           vlan.dat
+!Flash: 32514048 bytes total (12 MB free)
+!
+!Flash: nvram: Directory of nvram:/
+!Flash: nvram: -rw-        1401                    <no date>  Aserrest-VIB#EFDDCA.cer
+!Flash: nvram: -rw-         559                    <no date>  IOS-Self-Sig#1.cer
+!Flash: nvram: -rw-           0                    <no date>  ifIndex-table
+!Flash: nvram: ----          55                    <no date>  persistent-data
+!Flash: nvram: ----                                <no date>  private-config
+!Flash: nvram: -rw-                                <no date>  startup-config
+!Flash: nvram: 64 KB total (47% free)
+!
+!
+!NAME: "1",                     DESCR: "WS-C2960-48TT-L"
+!PID: WS-C2960-48TT-L
+!VID: V02
+!SN: FOC1041X3FU
+!NAME: "WS-C2960-48TT-L - Power Supply 0", DESCR: "WS-C2960-48TT-L - Power Supply 0"
+!SN: DCA103255K3
+!NAME: "WS-C2960-48TT-L - Fan 0", DESCR: "WS-C2960-48TT-L - Fan 0"
+!NAME: "WS-C2960-48TT-L - Fixed Module 0", DESCR: "WS-C2960-48TT-L - Fixed Module 0"
+!NAME: "GigabitEthernet0/1 Container", DESCR: "GigabitEthernet Container"
+!NAME: "GigabitEthernet0/2 Container", DESCR: "GigabitEthernet Container"
+!NAME: "FastEthernet0/1",       DESCR: "FastEthernet0/1"
+!NAME: "FastEthernet0/2",       DESCR: "FastEthernet0/2"
+!NAME: "FastEthernet0/3",       DESCR: "FastEthernet0/3"
+!NAME: "FastEthernet0/4",       DESCR: "FastEthernet0/4"
+!NAME: "FastEthernet0/5",       DESCR: "FastEthernet0/5"
+!NAME: "FastEthernet0/6",       DESCR: "FastEthernet0/6"
+!NAME: "FastEthernet0/7",       DESCR: "FastEthernet0/7"
+!NAME: "FastEthernet0/8",       DESCR: "FastEthernet0/8"
+!NAME: "FastEthernet0/9",       DESCR: "FastEthernet0/9"
+!NAME: "FastEthernet0/10",      DESCR: "FastEthernet0/10"
+!NAME: "FastEthernet0/11",      DESCR: "FastEthernet0/11"
+!NAME: "FastEthernet0/12",      DESCR: "FastEthernet0/12"
+!NAME: "FastEthernet0/13",      DESCR: "FastEthernet0/13"
+!NAME: "FastEthernet0/14",      DESCR: "FastEthernet0/14"
+!NAME: "FastEthernet0/15",      DESCR: "FastEthernet0/15"
+!NAME: "FastEthernet0/16",      DESCR: "FastEthernet0/16"
+!NAME: "FastEthernet0/17",      DESCR: "FastEthernet0/17"
+!NAME: "FastEthernet0/18",      DESCR: "FastEthernet0/18"
+!NAME: "FastEthernet0/19",      DESCR: "FastEthernet0/19"
+!NAME: "FastEthernet0/20",      DESCR: "FastEthernet0/20"
+!NAME: "FastEthernet0/21",      DESCR: "FastEthernet0/21"
+!NAME: "FastEthernet0/22",      DESCR: "FastEthernet0/22"
+!NAME: "FastEthernet0/23",      DESCR: "FastEthernet0/23"
+!NAME: "FastEthernet0/24",      DESCR: "FastEthernet0/24"
+!NAME: "FastEthernet0/25",      DESCR: "FastEthernet0/25"
+!NAME: "FastEthernet0/26",      DESCR: "FastEthernet0/26"
+!NAME: "FastEthernet0/27",      DESCR: "FastEthernet0/27"
+!NAME: "FastEthernet0/28",      DESCR: "FastEthernet0/28"
+!NAME: "FastEthernet0/29",      DESCR: "FastEthernet0/29"
+!NAME: "FastEthernet0/30",      DESCR: "FastEthernet0/30"
+!NAME: "FastEthernet0/31",      DESCR: "FastEthernet0/31"
+!NAME: "FastEthernet0/32",      DESCR: "FastEthernet0/32"
+!NAME: "FastEthernet0/33",      DESCR: "FastEthernet0/33"
+!NAME: "FastEthernet0/34",      DESCR: "FastEthernet0/34"
+!NAME: "FastEthernet0/35",      DESCR: "FastEthernet0/35"
+!NAME: "FastEthernet0/36",      DESCR: "FastEthernet0/36"
+!NAME: "FastEthernet0/37",      DESCR: "FastEthernet0/37"
+!NAME: "FastEthernet0/38",      DESCR: "FastEthernet0/38"
+!NAME: "FastEthernet0/39",      DESCR: "FastEthernet0/39"
+!NAME: "FastEthernet0/40",      DESCR: "FastEthernet0/40"
+!NAME: "FastEthernet0/41",      DESCR: "FastEthernet0/41"
+!NAME: "FastEthernet0/42",      DESCR: "FastEthernet0/42"
+!NAME: "FastEthernet0/43",      DESCR: "FastEthernet0/43"
+!NAME: "FastEthernet0/44",      DESCR: "FastEthernet0/44"
+!NAME: "FastEthernet0/45",      DESCR: "FastEthernet0/45"
+!NAME: "FastEthernet0/46",      DESCR: "FastEthernet0/46"
+!NAME: "FastEthernet0/47",      DESCR: "FastEthernet0/47"
+!NAME: "FastEthernet0/48",      DESCR: "FastEthernet0/48"
+!
+!VTP: VTP Version capable             : 1 to 3
+!VTP: VTP version running             : 1
+!VTP: VTP Domain Name                 : 
+!VTP: VTP Pruning Mode                : Disabled
+!VTP: VTP Traps Generation            : Disabled
+!VTP: Device ID                       : 0018.b9a2.2d00
+!VTP: Local updater ID is 10.1.99.6 on interface Vl99 (lowest numbered VLAN interface found)
+!VTP: Feature VLAN:
+!VTP: --------------
+!VTP: VTP Operating Mode                : Server
+!VTP: Maximum VLANs supported locally   : 255
+!VTP: Number of existing VLANs          : 10
+!VTP: Configuration Revision            : 5
+!VTP: MD5 digest                        : 0x35 0xF0 0x29 0x24 0xF1 0x11 0xEE 0x2F 
+!VTP:                                     0x4B 0xFA 0x35 0xCC 0xA4 0xE8 0x35 0x03 
+!
+!DOT1x: Sysauthcontrol              Enabled
+!DOT1x: Dot1x Protocol Version            3
+!
+!VLAN: VLAN Name                             Status    Ports
+!VLAN: ---- -------------------------------- --------- -------------------------------
+!VLAN: 1    default                          active    Gi0/1, Gi0/2
+!VLAN: 10   Klienter                         active    
+!VLAN: 20   Server                           active    Fa0/1, Fa0/2, Fa0/3, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11
+!VLAN:                                                 Fa0/12, Fa0/13, Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21
+!VLAN:                                                 Fa0/22, Fa0/23, Fa0/24, Fa0/25, Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31
+!VLAN:                                                 Fa0/32, Fa0/33, Fa0/34, Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40
+!VLAN: 30   IoT                              active    
+!VLAN: 40   Geast                            active    
+!VLAN: 99   Management                       active    
+!VLAN: 1002 fddi-default                     act/unsup 
+!VLAN: 1003 token-ring-default               act/unsup 
+!VLAN: 1004 fddinet-default                  act/unsup 
+!VLAN: 1005 trnet-default                    act/unsup 
+!VLAN: VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+!VLAN: ---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+!VLAN: 1    enet  100001     1500  -      -      -        -    -        0      0   
+!VLAN: 10   enet  100010     1500  -      -      -        -    -        0      0   
+!VLAN: 20   enet  100020     1500  -      -      -        -    -        0      0   
+!VLAN: 30   enet  100030     1500  -      -      -        -    -        0      0   
+!VLAN: 40   enet  100040     1500  -      -      -        -    -        0      0   
+!VLAN: 99   enet  100099     1500  -      -      -        -    -        0      0   
+!VLAN: 1002 fddi  101002     1500  -      -      -        -    -        0      0   
+!VLAN: 1003 tr    101003     1500  -      -      -        -    -        0      0   
+!VLAN: 1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+!VLAN: 1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+!VLAN: Remote SPAN VLANs
+!VLAN: ------------------------------------------------------------------------------
+!VLAN: Primary Secondary Type              Ports
+!VLAN: ------- --------- ----------------- ------------------------------------------
+!
+!SDM Template: default
+!
+!MTU: 1500
+!MTU-Jumbo: 1500
+!MTU-Routing: 1500
+!
+!
+config-register 0xF
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname VIB-ACCESS-SW02
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$mOa9$gW9Ag3sx9z0/u7hfxK7Ee/
+!
+username ase privilege 15 secret 5 $1$oje6$LMS381pMR9QEo7dXch0gy/
+aaa new-model
+!
+aaa authentication login default group radius local
+aaa authentication dot1x default group radius
+aaa authorization exec default group radius local 
+!
+aaa session-id common
+clock timezone CET 1 0
+system mtu routing 1500
+!
+ip domain-name aserrest.local
+ip name-server 10.1.20.4
+!
+crypto pki trustpoint TP-self-signed-3114413312
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3114413312
+ revocation-check none
+ rsakeypair TP-self-signed-3114413312
+!
+crypto pki trustpoint ASERREST
+ enrollment mode ra
+ enrollment url http://VIB-CA01:80/certsrv/mscep/mscep.dll
+! password <removed>
+ fingerprint 6948B98BE28651EFCA29C3C560920524
+ subject-name cn=VIB-ACCESS-SW02.aserrest.local
+ revocation-check none
+ rsakeypair ASERREST_KEYPAIR
+!
+crypto pki certificate chain TP-self-signed-3114413312
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33313134 34313333 3132301E 170D3933 30333031 30303031 
+  30335A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 31313434 
+  31333331 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100E985 F9FF3913 0BF4143D 7CD320D4 4B648F3E BBE93C4C 7F1286E1 8928CCF3 
+  3A1EE774 04C6BF43 9230B07F 3C5F909C 11004DCB 9EBBD9EB 01884270 A90EE9F6 
+  4F013137 0C893BB4 D7B9BE80 75511E6B FD343E31 4B4AF609 EEB8B554 F9F511EF 
+  F94B6C27 054C7245 392616C8 D57FD709 D2A23F29 41BC0F2D 61F9C613 E960FFE6 
+  AEA10203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 1495D6F3 DAB8FE40 6AE496B7 48881CCA 60887705 6B301D06 
+  03551D0E 04160414 95D6F3DA B8FE406A E496B748 881CCA60 8877056B 300D0609 
+  2A864886 F70D0101 05050003 81810026 B11BEC3A 578D3CFA 6FBF2512 B0751CA2 
+  C230D5EA A65A1631 4488EFCE E34184DA 3DE33A09 96ACB06F 6EE100EE 623825EE 
+  A96C3D36 684BDDA0 EF73D969 403564BF E64F4BE9 BB4277E6 6EB9907B DDC91165 
+  B687E8B1 98B43DFE 931311B6 28A1AC85 C30F4CB3 68A6FBFA EBA04246 C4303886 
+  144D3BDF 1A08C5BC DAC4A0BB 94F521
+  	quit
+crypto pki certificate chain ASERREST
+ certificate ca 46AF651886FF968440C098C5CB2AEFDD
+  30820575 3082035D A0030201 02021046 AF651886 FF968440 C098C5CB 2AEFDD30 
+  0D06092A 864886F7 0D01010B 0500304D 31153013 060A0992 268993F2 2C640119 
+  16056C6F 63616C31 18301606 0A099226 8993F22C 64011916 08417365 72726573 
+  74311A30 18060355 04031311 41736572 72657374 2D564942 2D434130 31301E17 
+  0D323631 31303930 37353332 345A170D 33313131 30393038 30333231 5A304D31 
+  15301306 0A099226 8993F22C 64011916 056C6F63 616C3118 3016060A 09922689 
+  93F22C64 01191608 41736572 72657374 311A3018 06035504 03131141 73657272 
+  6573742D 5649422D 43413031 30820222 300D0609 2A864886 F70D0101 01050003 
+  82020F00 3082020A 02820201 00A8B6FB 944362D7 9F18507C AA506635 BC54B400 
+  0161D90F 61482703 94FA5503 479DC465 6FCD30DE D6F3CF5A F0F6242E 12FDFBD4 
+  37E051D6 08A1DBE0 B53E1656 E87AD240 79754C22 7A68BB87 4740D93D A979F61C 
+  C5B74139 D24D23E7 45553E9A F94E532B 4E894170 C676EF64 3B3FC0AE 41616B0A 
+  BD8DC5C3 192177F9 536A35D5 DFECDD88 64D7B932 A3F43FF4 D5FFEBA3 CACFF48E 
+  06608F68 C11E2107 38FE8D3B 8FE75331 D9D26B0B F15DA9B3 30318858 298E28F0 
+  BFD83F1D 946B8920 19F4033D C48BAB1A 83C7AEBC 63F216D2 2BF4FABC 8CEFCFD0 
+  742A1040 8018A9BD FE7A602F 3135830E BA8E441C 26C92A99 A5E3AA57 DF9D3D2C 
+  25DFD04C E730986E 9753F7DE 48C1A455 C49621AC 41EE8DF5 B1F2D771 9FA6E86C 
+  C8508258 529AF4CE 4BC57670 208C95E4 CEC452CB C149DA9D 9FCB1923 3B247F64 
+  6FA6E40D 97AB1C6A F7161342 3210CE77 C1C6B1E4 5461A6C0 296C23C7 31F5719A 
+  8AF1FE0F 0D17909F F99C5824 5F24E1EC F1DED27E DA1E6274 EB1CE5B5 DF8FA0DC 
+  0563C1F3 73AFF3FD F24449FE EBF3C00B 3DEEEEBB 4B47AEF5 52150E6A 83CB4D14 
+  F80D8FBB 5FB0A1BC 214C59D4 FA48414F 67D89368 6562D31E E361265B 650BBD9C 
+  15E9EECA 311E0852 38C5B0CE 4DDC3440 05A35959 4A52A0CD 0FDF0EA1 183B16D2 
+  6FF09CA5 4DF61D4A 60EAE795 D3FB4B1B A211C5B8 E83270A0 AB0168F8 A29D3199 
+  DCDA5CF2 1D97F1AB AD07F036 ED020301 0001A351 304F300B 0603551D 0F040403 
+  02018630 0F060355 1D130101 FF040530 030101FF 301D0603 551D0E04 160414BE 
+  F879C122 C295209A 06766BAE 5701CDA3 C83C6730 1006092B 06010401 82371501 
+  04030201 00300D06 092A8648 86F70D01 010B0500 03820201 0072FBB7 408872E6 
+  EB9D4C27 D125BB82 33FF18D0 00478705 D25C6FE8 29469A47 9E4A985F D3E925E6 
+  933FD4E0 53E793C7 6137EEB8 EFAD9EA2 B375EEB2 823ECE6A 94401769 E2356839 
+  2762AC7A C52E13A3 61BE5BAA D5B93B9E 8A5E4D7C 669296E6 BAF77889 364E907F 
+  2F99CC34 4677C7E4 F21A305F C2E33569 5511A78A 4C6258C5 AE7D2E55 EE26A470 
+  D24C4A84 461A9241 18852D47 53DA616A 7EAF34DA 50A4658E E8EB2EF4 E5E58B17 
+  3A6D64CC 69B46D94 7C1E1DEA 39D4628E 5818333C 11A935D0 417E00DE 49ED3E65 
+  670F0E15 0A11019C 85208F46 2025028A 124C0601 C970772B DBA7F201 94822C4A 
+  B4FBBE0E 9AD25211 1FBB08F8 4BACE6F9 85531522 6E8B0F62 BF0365E9 3F14F06F 
+  7D2BD453 E6E1C528 28DE305E 679F6F3C 7A690547 4B5C5E76 AA19EC04 2852B2E2 
+  9FAFB9E9 65288C8F 0641BBED A9DFF0C8 99E74C72 855612FB C56A1E37 1C3D972C 
+  8AC6A58D 696C587B 9D4943D8 DDDC9885 84BE5E78 6EEDEC9D D34B1C49 24285266 
+  F03EC19D 9BD1B8B3 414AB8D8 BB6A6D57 EE8C4ADC 0B149AD4 B005374A 2FFE09FE 
+  1D0AE18E 03549511 5908038F BF62F2AE 1D6820D6 4E8CC507 81B69105 99680B99 
+  E0C54E3B 98A14A02 F22B2AE3 F124F187 9332CE51 63710FF9 D5CACC5E C94045AA 
+  D88EE329 04DDA3FC 36BB0CC9 ED862CD2 ECA80724 C9E03241 B2D1C6BB BDF84151 
+  EDD9B5C9 0915D70E 478C4E4C 4CD01865 E63656FA 87CEC993 89
+  	quit
+dot1x system-auth-control
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+ip ssh version 2
+!
+interface Port-channel2
+!
+interface Port-channel3
+ switchport trunk allowed vlan 20,99
+ switchport mode trunk
+!
+interface FastEthernet0/1
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/2
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/3
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/4
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/5
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/6
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/7
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/8
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/9
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/10
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/11
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/12
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/13
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/14
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/15
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/16
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/17
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/18
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/19
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/20
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/21
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/22
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/23
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/24
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/25
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/26
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/27
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/28
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/29
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/30
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/31
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/32
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/33
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/34
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/35
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/36
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/37
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/38
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/39
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/40
+ switchport access vlan 20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
+!
+interface FastEthernet0/41
+ switchport trunk allowed vlan 20,99
+ switchport mode trunk
+ channel-group 3 mode active
+!
+interface FastEthernet0/42
+ switchport trunk allowed vlan 20,99
+ switchport mode trunk
+ channel-group 3 mode active
+!
+interface FastEthernet0/43
+ switchport access vlan 20
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+ channel-group 2 mode auto
+!
+interface FastEthernet0/44
+ switchport access vlan 20
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+ channel-group 2 mode auto
+!
+interface FastEthernet0/45
+ switchport access vlan 20
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+ channel-group 2 mode auto
+!
+interface FastEthernet0/46
+ switchport access vlan 20
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+ channel-group 2 mode auto
+!
+interface FastEthernet0/47
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+!
+interface FastEthernet0/48
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan99
+ ip address 10.1.99.6 255.255.255.0
+!
+ip default-gateway 10.1.0.1
+ip http server
+ip http secure-server
+ip radius source-interface Vlan99 
+access-list 99 permit 10.1.20.0 0.0.0.255
+access-list 99 permit 10.1.99.0 0.0.0.255
+access-list 99 permit 10.2.20.0 0.0.0.255
+access-list 99 permit 10.2.99.0 0.0.0.255
+snmp-server community ZabbixHallu! RO
+!radius-server host 10.1.20.5 key <removed>
+!
+line con 0
+ logging synchronous
+line vty 0 4
+ access-class 99 in
+ logging synchronous
+ transport input ssh
+line vty 5 15
+!
+ntp server 10.1.20.4 prefer
+end
