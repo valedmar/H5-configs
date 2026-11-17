@@ -1,0 +1,8 @@
+/routers.all
+/routers.down
+/routers.single
+/routers.up
+/runcount
+.old
+*.new
+*.raw
