@@ -146,14 +146,14 @@
 !
 !VLAN: VLAN Name                             Status    Ports
 !VLAN: ---- -------------------------------- --------- -------------------------------
-!VLAN: 1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11
-!VLAN:                                                 Fa0/12, Fa0/13, Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21
-!VLAN:                                                 Fa0/22, Fa0/25, Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31, Fa0/32, Fa0/33
-!VLAN:                                                 Fa0/34, Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40, Gi0/1, Gi0/2
+!VLAN: 1    default                          active    Fa0/1, Fa0/2, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11, Fa0/12
+!VLAN:                                                 Fa0/13, Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21, Fa0/22
+!VLAN:                                                 Fa0/25, Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31, Fa0/32, Fa0/33, Fa0/34
+!VLAN:                                                 Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40, Gi0/1, Gi0/2
 !VLAN: 10   Klienter                         active    
 !VLAN: 20   Server                           active    
 !VLAN: 30   IoT                              active    
-!VLAN: 40   Geast                            active    
+!VLAN: 40   Geast                            active    Fa0/3
 !VLAN: 98   wifi                             active    Fa0/23
 !VLAN: 99   Management                       active    
 !VLAN: 1002 fddi-default                     act/unsup 
@@ -329,6 +329,7 @@ interface FastEthernet0/2
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/3
  switchport mode access
@@ -336,6 +337,7 @@ interface FastEthernet0/3
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/4
  switchport mode access
@@ -343,6 +345,7 @@ interface FastEthernet0/4
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/5
  switchport mode access
@@ -350,6 +353,7 @@ interface FastEthernet0/5
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/6
  switchport mode access
@@ -357,6 +361,7 @@ interface FastEthernet0/6
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/7
  switchport mode access
@@ -364,6 +369,7 @@ interface FastEthernet0/7
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/8
  switchport mode access
@@ -371,6 +377,7 @@ interface FastEthernet0/8
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/9
  switchport mode access
@@ -378,6 +385,7 @@ interface FastEthernet0/9
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/10
  switchport mode access
@@ -385,6 +393,7 @@ interface FastEthernet0/10
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/11
  switchport mode access
@@ -392,6 +401,7 @@ interface FastEthernet0/11
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/12
  switchport mode access
@@ -399,6 +409,7 @@ interface FastEthernet0/12
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/13
  switchport mode access
@@ -406,6 +417,7 @@ interface FastEthernet0/13
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/14
  switchport mode access
@@ -413,6 +425,7 @@ interface FastEthernet0/14
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/15
  switchport mode access
@@ -420,6 +433,7 @@ interface FastEthernet0/15
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/16
  switchport mode access
@@ -427,6 +441,7 @@ interface FastEthernet0/16
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/17
  switchport mode access
@@ -434,6 +449,7 @@ interface FastEthernet0/17
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/18
  switchport mode access
@@ -441,6 +457,7 @@ interface FastEthernet0/18
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/19
  switchport mode access
@@ -448,6 +465,7 @@ interface FastEthernet0/19
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/20
  switchport mode access
@@ -455,6 +473,7 @@ interface FastEthernet0/20
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/21
  switchport mode access
@@ -462,6 +481,7 @@ interface FastEthernet0/21
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/22
  switchport mode access
@@ -469,6 +489,7 @@ interface FastEthernet0/22
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/23
  switchport access vlan 98
@@ -477,6 +498,7 @@ interface FastEthernet0/23
  authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
+ dot1x timeout tx-period 5
 !
 interface FastEthernet0/24
  switchport trunk native vlan 98
