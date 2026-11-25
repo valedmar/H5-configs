@@ -352,7 +352,7 @@
   </ntpd>
   <OPNsense>
     <Firewall>
-      <Filter version="1.0.6" persisted_at="1794900072.56" description="Firewall rules (new)">
+      <Filter version="1.0.6" persisted_at="1795604117.68" description="Firewall rules (new)">
         <general/>
         <rules>
           <rule uuid="8a9c0a76-6b17-4bb5-a2dc-9a61d537ec79">
@@ -1025,6 +1025,67 @@
             <shaper2/>
             <description>Permit ping</description>
             <audit>eyJjcmVhdGVkIjp7InVzZXJuYW1lIjoicm9vdEAxMC4yLjEwLjEzMCIsInRpbWUiOiIxNzk0ODI5NjM3LjkyIiwiZGVzY3JpcHRpb24iOiJcL2FwaVwvYXBpLnBocCBtYWRlIGNoYW5nZXMifSwidXBkYXRlZCI6eyJ1c2VybmFtZSI6InJvb3RAMTAuMi4xMC4xMzAiLCJ0aW1lIjoiMTc5NDgyOTc3Ni4xNyIsImRlc2NyaXB0aW9uIjoiXC9hcGlcL2FwaS5waHAgbWFkZSBjaGFuZ2VzIn0sInVzZXJkYXRhIjp7Im5vdGUiOiIifX0=</audit>
+          </rule>
+          <rule uuid="3489df8e-9e33-4001-8282-cbfb27a21625">
+            <enabled>1</enabled>
+            <statetype>keep</statetype>
+            <state-policy/>
+            <sequence>252</sequence>
+            <action>pass</action>
+            <quick>1</quick>
+            <interfacenot>0</interfacenot>
+            <interface>opt4,opt5</interface>
+            <received-on-not>0</received-on-not>
+            <received-on/>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>UDP</protocol>
+            <icmptype/>
+            <icmp6type/>
+            <source_net>10.2.20.4</source_net>
+            <source_not>0</source_not>
+            <source_port>67-68</source_port>
+            <destination_net>any</destination_net>
+            <destination_not>0</destination_not>
+            <destination_port>67-68</destination_port>
+            <divert-to/>
+            <gateway/>
+            <replyto/>
+            <disablereplyto>0</disablereplyto>
+            <log>0</log>
+            <allowopts>0</allowopts>
+            <nosync>0</nosync>
+            <nopfsync>0</nopfsync>
+            <statetimeout/>
+            <udp-first/>
+            <udp-multiple/>
+            <udp-single/>
+            <max-src-nodes/>
+            <max-src-states/>
+            <max-src-conn/>
+            <max/>
+            <max-src-conn-rate/>
+            <max-src-conn-rates/>
+            <max-pkt-rate-number/>
+            <max-pkt-rate-seconds/>
+            <overload/>
+            <adaptivestart/>
+            <adaptiveend/>
+            <prio/>
+            <set-prio/>
+            <set-prio-low/>
+            <tag/>
+            <tagged/>
+            <tcpflags1/>
+            <tcpflags2/>
+            <tcpflags_any>0</tcpflags_any>
+            <categories/>
+            <sched/>
+            <tos/>
+            <shaper1/>
+            <shaper2/>
+            <description>Permit DHCP</description>
+            <audit>eyJjcmVhdGVkIjp7InVzZXJuYW1lIjoicm9vdEAxMC4xLjIwLjI1NCIsInRpbWUiOiIxNzk1NjA0MDI1LjYxIiwiZGVzY3JpcHRpb24iOiJcL2FwaVwvYXBpLnBocCBtYWRlIGNoYW5nZXMifSwidXBkYXRlZCI6eyJ1c2VybmFtZSI6InJvb3RAMTAuMS4yMC4yNTQiLCJ0aW1lIjoiMTc5NTYwNDExNy42NyIsImRlc2NyaXB0aW9uIjoiXC9hcGlcL2FwaS5waHAgbWFkZSBjaGFuZ2VzIn0sInVzZXJkYXRhIjp7Im5vdGUiOiIifX0=</audit>
           </rule>
         </rules>
         <snatrules>
@@ -2362,8 +2423,8 @@
   </OPNsense>
   <revision>
     <username>root@10.1.20.254</username>
-    <description>user "rancid" changed</description>
-    <time>1795420598.87</time>
+    <description>/api/firewall/filter/set_rule/3489df8e-9e33-4001-8282-cbfb27a21625 made changes</description>
+    <time>1795604117.68</time>
   </revision>
   <hasync version="1.0.2" persisted_at="1793628230.05" description="HA sync">
     <disablepreempt>0</disablepreempt>

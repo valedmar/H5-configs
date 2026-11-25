@@ -41,8 +41,8 @@
 !
 !Flash: Directory of flash:/
 !Flash:        -rwx    12746112   Mar 1 1993 00:45:16 +00:00  c3560-ipservicesk9-mz.122-55.SE12.bin
-!Flash:        -rwx        5346   Mar 1 1993 21:56:47 +00:00  config.text
-!Flash:        -rwx        5512   Mar 1 1993 21:56:47 +00:00  private-config.text
+!Flash:        -rwx        5433  Mar 10 1993 01:08:59 +00:00  config.text
+!Flash:        -rwx        5512  Mar 10 1993 01:08:59 +00:00  private-config.text
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (18 MB free)
 !
@@ -318,6 +318,7 @@ interface Vlan10
  ip address 10.1.8.3 255.255.252.0
  ip access-group VLAN10-IN in
  ip helper-address 10.1.20.4
+ ip helper-address 10.2.20.4
  standby 1 ip 10.1.8.1
 !
 interface Vlan20
@@ -329,12 +330,14 @@ interface Vlan30
  ip address 10.1.30.3 255.255.255.0
  ip access-group VLAN30-IN in
  ip helper-address 10.1.20.4
+ ip helper-address 10.2.20.4
  standby 1 ip 10.1.30.1
 !
 interface Vlan40
  ip address 10.1.40.3 255.255.255.0
  ip access-group VLAN40-IN in
  ip helper-address 10.1.20.4
+ ip helper-address 10.2.20.4
  standby 1 ip 10.1.40.1
 !
 interface Vlan99
@@ -386,14 +389,8 @@ ip access-list extended VLAN30-IN
  deny   ip 192.168.0.0 0.0.255.255 any
  permit ip any any
 ip access-list extended VLAN40-IN
- permit ip 10.1.40.0 0.0.0.255 any
- permit ip 10.2.40.0 0.0.0.255 any
- permit ip 10.1.99.0 0.0.0.255 any
- permit ip 10.2.99.0 0.0.0.255 any
- deny   ip 10.0.0.0 0.255.255.255 any
- deny   ip 172.16.0.0 0.0.255.255 any
- deny   ip 192.168.0.0 0.0.255.255 any
- permit ip any any
+ remark --- DHCP ---
+ permit udp 10.1.40.0 0.0.0.255 host 10.1.20.4 eq bootps
 !
 ip radius source-interface Vlan99 
 access-list 99 permit 10.1.20.0 0.0.0.255

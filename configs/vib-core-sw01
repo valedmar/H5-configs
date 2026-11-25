@@ -41,9 +41,9 @@
 !
 !Flash: Directory of flash:/
 !Flash:        -rwx    12746112   Jan 1 1970 00:38:06 +00:00  c3560-ipservicesk9-mz.122-55.SE12.bin
-!Flash:        -rwx        5220   Mar 2 1993 00:39:30 +00:00  config.text
+!Flash:        -rwx        5336  Mar 10 1993 01:08:18 +00:00  config.text
 !Flash:        -rwx        1389   Mar 1 1993 00:09:06 +00:00  config.text.renamed
-!Flash:        -rwx        5501   Mar 2 1993 00:39:30 +00:00  private-config.text
+!Flash:        -rwx        5501  Mar 10 1993 01:08:18 +00:00  private-config.text
 !Flash:        -rwx          24   Mar 1 1993 00:09:06 +00:00  private-config.text.renamed
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (18 MB free)
@@ -322,23 +322,27 @@ interface Vlan10
  ip address 10.1.8.2 255.255.252.0
  ip access-group VLAN10-IN in
  ip helper-address 10.1.20.4
+ ip helper-address 10.2.20.4
  standby 1 ip 10.1.8.1
 !
 interface Vlan20
  ip address 10.1.20.2 255.255.255.0
  ip access-group VLAN20-IN in
+ ip helper-address 10.2.20.4
  standby 1 ip 10.1.20.1
 !
 interface Vlan30
  ip address 10.1.30.2 255.255.255.0
  ip access-group VLAN30-IN in
  ip helper-address 10.1.20.4
+ ip helper-address 10.2.20.4
  standby 1 ip 10.1.30.1
 !
 interface Vlan40
  ip address 10.1.40.2 255.255.255.0
  ip access-group VLAN40-IN in
  ip helper-address 10.1.20.4
+ ip helper-address 10.2.20.4
  standby 1 ip 10.1.40.1
 !
 interface Vlan99
