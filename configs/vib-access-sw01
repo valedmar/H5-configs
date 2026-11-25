@@ -317,8 +317,7 @@ interface Port-channel3
 !
 interface FastEthernet0/1
  switchport mode access
- authentication event fail action authorize vlan 40
- authentication event no-response action authorize vlan 40
+ authentication host-mode multi-auth
  authentication port-control auto
  dot1x pae authenticator
  dot1x timeout tx-period 5
