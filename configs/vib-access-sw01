@@ -43,9 +43,9 @@
 !
 !Flash: Directory of flash:/
 !Flash:        drwx         192   Mar 1 1993 01:08:20 +01:00  c2960-lanbasek9-mz.150-2.SE11
-!Flash:        -rwx       13445  Mar 10 1993 00:25:44 +01:00  config.text
+!Flash:        -rwx       13351  Mar 10 1993 04:51:28 +01:00  config.text
 !Flash:        -rwx         366   Mar 1 1993 01:02:42 +01:00  express_setup.debug
-!Flash:        -rwx       15881  Mar 10 1993 00:25:44 +01:00  private-config.text
+!Flash:        -rwx       15881  Mar 10 1993 04:51:28 +01:00  private-config.text
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (15 MB free)
 !
@@ -669,22 +669,17 @@ interface Vlan99
 !
 ip http server
 ip http secure-server
-!
-ip access-list extended Zabbix
- permit udp host 10.1.20.12 any
 ip radius source-interface Vlan99 
-access-list 99 permit 10.1.20.0 0.0.0.255
 access-list 99 permit 10.1.99.0 0.0.0.255
-access-list 99 permit 10.2.20.0 0.0.0.255
 access-list 99 permit 10.2.99.0 0.0.0.255
-access-list 101 permit udp any any eq 1812
 snmp-server community ZabbixHallu! RO
 snmp-server trap link ietf
-snmp-server enable traps snmp authentication linkdown
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps entity
 snmp-server enable traps cpu threshold
 snmp-server enable traps auth-framework sec-violation
-snmp-server enable traps dot1x auth-fail-vlan
-snmp-server enable traps envmon temperature status
+snmp-server enable traps dot1x auth-fail-vlan no-auth-fail-vlan
+snmp-server enable traps envmon fan shutdown supply temperature status
 snmp-server enable traps config
 snmp-server enable traps syslog
 !radius-server host 10.1.20.5 key <removed>
@@ -694,7 +689,7 @@ vstack
 line con 0
  logging synchronous
 line vty 0 4
- access-class 99 in
+ access-class 99 out
  logging synchronous
  transport input ssh
 line vty 5 15

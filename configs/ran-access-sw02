@@ -43,10 +43,10 @@
 !
 !Flash: Directory of flash:/
 !Flash:        drwx         256   Mar 1 1993 00:07:31 +00:00  c2960-lanbasek9-mz.150-2.SE4
-!Flash:        -rwx        6644  Mar 10 1993 03:19:22 +00:00  config.text
+!Flash:        -rwx        6887  Mar 10 1993 03:21:21 +00:00  config.text
 !Flash:        -rwx        1694   Mar 2 1993 23:53:43 +00:00  downloads
 !Flash:        -rwx         667   Mar 1 1993 00:03:36 +00:00  express_setup.debug
-!Flash:        -rwx        5490  Mar 10 1993 03:19:22 +00:00  private-config.text
+!Flash:        -rwx        5490  Mar 10 1993 03:21:21 +00:00  private-config.text
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (15 MB free)
 !
@@ -397,6 +397,11 @@ ip default-gateway 10.2.99.1
 ip http server
 ip http secure-server
 snmp-server community ZabbixHallu! RO
+snmp-server enable traps snmp linkdown linkup coldstart warmstart
+snmp-server enable traps entity
+snmp-server enable traps dot1x no-auth-fail-vlan
+snmp-server enable traps envmon fan shutdown supply temperature
+snmp-server enable traps config
 !
 line con 0
 line vty 0 4

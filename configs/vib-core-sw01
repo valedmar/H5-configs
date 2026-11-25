@@ -41,9 +41,9 @@
 !
 !Flash: Directory of flash:/
 !Flash:        -rwx    12746112   Jan 1 1970 00:38:06 +00:00  c3560-ipservicesk9-mz.122-55.SE12.bin
-!Flash:        -rwx        6005  Mar 10 1993 03:16:05 +00:00  config.text
+!Flash:        -rwx        6305  Mar 10 1993 03:54:00 +00:00  config.text
 !Flash:        -rwx        1389   Mar 1 1993 00:09:06 +00:00  config.text.renamed
-!Flash:        -rwx        5501  Mar 10 1993 03:16:05 +00:00  private-config.text
+!Flash:        -rwx        5501  Mar 10 1993 03:54:00 +00:00  private-config.text
 !Flash:        -rwx          24   Mar 1 1993 00:09:06 +00:00  private-config.text.renamed
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (18 MB free)
@@ -414,9 +414,15 @@ ip access-list extended VLAN40-OUT
  permit ip any 10.1.40.0 0.0.0.255
 !
 ip radius source-interface Vlan99 
-access-list 101 permit udp any any eq 1812
+access-list 99 permit 10.1.99.0 0.0.0.255
+access-list 99 permit 10.2.99.0 0.0.0.255
 !
 snmp-server community ZabbixHallu! RO
+snmp-server enable traps snmp linkdown linkup coldstart warmstart
+snmp-server enable traps entity
+snmp-server enable traps dot1x auth-fail-vlan no-auth-fail-vlan
+snmp-server enable traps envmon fan shutdown supply temperature
+snmp-server enable traps config
 !radius-server host 10.1.20.5 auth-port 1645 acct-port 1646 key <removed>
 !
 vstack
@@ -424,7 +430,7 @@ vstack
 line con 0
  logging synchronous
 line vty 0 4
- access-class 99 in
+ access-class 99 out
  logging synchronous
  transport input ssh
 line vty 5 15
