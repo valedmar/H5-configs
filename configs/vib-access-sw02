@@ -44,10 +44,10 @@
 !Flash: Directory of flash:/
 !Flash:        drwx         192   Mar 1 1993 01:06:21 +01:00  c2960-lanbase-mz.122-25.SEE2
 !Flash:        -rwx    11831020   Mar 1 1993 04:24:53 +01:00  c2960-lanbasek9-mz.150-2.SE9.bin
-!Flash:        -rwx       13397   Mar 1 1993 22:46:23 +01:00  config.text
+!Flash:        -rwx       13376   Mar 8 1993 01:36:52 +01:00  config.text
 !Flash:        -rwx        1959   Mar 1 1993 01:06:01 +01:00  express_setup.debug
 !Flash:        drwx          64   Jan 1 1970 01:00:09 +01:00  lost+found
-!Flash:        -rwx       15888   Mar 1 1993 22:46:23 +01:00  private-config.text
+!Flash:        -rwx       15888   Mar 8 1993 01:36:52 +01:00  private-config.text
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (12 MB free)
 !
@@ -143,11 +143,11 @@
 !VLAN: ---- -------------------------------- --------- -------------------------------
 !VLAN: 1    default                          active    Gi0/1, Gi0/2
 !VLAN: 10   Klienter                         active    
-!VLAN: 20   Server                           active    Fa0/1, Fa0/2, Fa0/3, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11
-!VLAN:                                                 Fa0/12, Fa0/13, Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21
-!VLAN:                                                 Fa0/22, Fa0/23, Fa0/24, Fa0/25, Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31
-!VLAN:                                                 Fa0/32, Fa0/33, Fa0/34, Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40
-!VLAN: 30   IoT                              active    
+!VLAN: 20   Server                           active    Fa0/2, Fa0/3, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11, Fa0/12
+!VLAN:                                                 Fa0/13, Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21, Fa0/22
+!VLAN:                                                 Fa0/23, Fa0/24, Fa0/25, Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31, Fa0/32
+!VLAN:                                                 Fa0/33, Fa0/34, Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40
+!VLAN: 30   IoT                              active    Fa0/1
 !VLAN: 40   Geast                            active    
 !VLAN: 99   Management                       active    
 !VLAN: 1002 fddi-default                     act/unsup 
@@ -199,6 +199,7 @@ aaa new-model
 aaa authentication login default group radius local
 aaa authentication dot1x default group radius
 aaa authorization exec default group radius local 
+aaa authorization network default group radius 
 !
 aaa session-id common
 clock timezone CET 1 0

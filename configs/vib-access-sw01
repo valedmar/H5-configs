@@ -43,9 +43,9 @@
 !
 !Flash: Directory of flash:/
 !Flash:        drwx         192   Mar 1 1993 01:08:20 +01:00  c2960-lanbasek9-mz.150-2.SE11
-!Flash:        -rwx       12733   Mar 1 1993 22:49:05 +01:00  config.text
+!Flash:        -rwx       13445  Mar 10 1993 00:25:44 +01:00  config.text
 !Flash:        -rwx         366   Mar 1 1993 01:02:42 +01:00  express_setup.debug
-!Flash:        -rwx       15881   Mar 1 1993 22:49:05 +01:00  private-config.text
+!Flash:        -rwx       15881  Mar 10 1993 00:25:44 +01:00  private-config.text
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (15 MB free)
 !
@@ -61,7 +61,7 @@
 !Flash: nvram: ----          52                    <no date>  persistent-data
 !Flash: nvram: ----                                <no date>  private-config
 !Flash: nvram: -rw-                                <no date>  startup-config
-!Flash: nvram: 64 KB total (40% free)
+!Flash: nvram: 64 KB total (39% free)
 !
 !
 !NAME: "1",                     DESCR: "WS-C2960-48TC-L"
@@ -146,13 +146,13 @@
 !
 !VLAN: VLAN Name                             Status    Ports
 !VLAN: ---- -------------------------------- --------- -------------------------------
-!VLAN: 1    default                          active    Fa0/2, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11, Fa0/12, Fa0/13
-!VLAN:                                                 Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21, Fa0/22, Fa0/25
-!VLAN:                                                 Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31, Fa0/32, Fa0/33, Fa0/34, Fa0/35
-!VLAN:                                                 Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40, Gi0/1, Gi0/2
+!VLAN: 1    default                          active    Fa0/1, Fa0/2, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11, Fa0/12
+!VLAN:                                                 Fa0/13, Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21, Fa0/22
+!VLAN:                                                 Fa0/25, Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31, Fa0/32, Fa0/33, Fa0/34
+!VLAN:                                                 Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40, Gi0/1, Gi0/2
 !VLAN: 10   Klienter                         active    
 !VLAN: 20   Server                           active    
-!VLAN: 30   IoT                              active    Fa0/1
+!VLAN: 30   IoT                              active    
 !VLAN: 40   Geast                            active    Fa0/3
 !VLAN: 98   wifi                             active    Fa0/23
 !VLAN: 99   Management                       active    
@@ -318,6 +318,8 @@ interface Port-channel3
 !
 interface FastEthernet0/1
  switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
  authentication port-control auto
  dot1x pae authenticator
  dot1x timeout tx-period 5
