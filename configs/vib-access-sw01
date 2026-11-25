@@ -146,14 +146,14 @@
 !
 !VLAN: VLAN Name                             Status    Ports
 !VLAN: ---- -------------------------------- --------- -------------------------------
-!VLAN: 1    default                          active    Fa0/1, Fa0/2, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11, Fa0/12
-!VLAN:                                                 Fa0/13, Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21, Fa0/22
-!VLAN:                                                 Fa0/25, Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31, Fa0/32, Fa0/33, Fa0/34
-!VLAN:                                                 Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40, Gi0/1, Gi0/2
+!VLAN: 1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11
+!VLAN:                                                 Fa0/12, Fa0/13, Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21
+!VLAN:                                                 Fa0/22, Fa0/25, Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31, Fa0/32, Fa0/33
+!VLAN:                                                 Fa0/34, Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40, Gi0/1, Gi0/2
 !VLAN: 10   Klienter                         active    
 !VLAN: 20   Server                           active    
 !VLAN: 30   IoT                              active    
-!VLAN: 40   Geast                            active    Fa0/3
+!VLAN: 40   Geast                            active    
 !VLAN: 98   wifi                             active    Fa0/23
 !VLAN: 99   Management                       active    
 !VLAN: 1002 fddi-default                     act/unsup 

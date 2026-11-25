@@ -141,12 +141,12 @@
 !
 !VLAN: VLAN Name                             Status    Ports
 !VLAN: ---- -------------------------------- --------- -------------------------------
-!VLAN: 1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11
+!VLAN: 1    default                          active    Gi0/1, Gi0/2
+!VLAN: 10   Klienter                         active    
+!VLAN: 20   Server                           active    Fa0/1, Fa0/2, Fa0/3, Fa0/4, Fa0/5, Fa0/6, Fa0/7, Fa0/8, Fa0/9, Fa0/10, Fa0/11
 !VLAN:                                                 Fa0/12, Fa0/13, Fa0/14, Fa0/15, Fa0/16, Fa0/17, Fa0/18, Fa0/19, Fa0/20, Fa0/21
 !VLAN:                                                 Fa0/22, Fa0/23, Fa0/24, Fa0/25, Fa0/26, Fa0/27, Fa0/28, Fa0/29, Fa0/30, Fa0/31
-!VLAN:                                                 Fa0/32, Fa0/33, Fa0/34, Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40, Gi0/1, Gi0/2
-!VLAN: 10   Klienter                         active    
-!VLAN: 20   Server                           active    
+!VLAN:                                                 Fa0/32, Fa0/33, Fa0/34, Fa0/35, Fa0/36, Fa0/37, Fa0/38, Fa0/39, Fa0/40
 !VLAN: 30   IoT                              active    
 !VLAN: 40   Geast                            active    
 !VLAN: 99   Management                       active    
@@ -307,6 +307,7 @@ interface Port-channel3
  switchport mode trunk
 !
 interface FastEthernet0/1
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -314,6 +315,7 @@ interface FastEthernet0/1
  dot1x pae authenticator
 !
 interface FastEthernet0/2
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -321,6 +323,7 @@ interface FastEthernet0/2
  dot1x pae authenticator
 !
 interface FastEthernet0/3
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -328,6 +331,7 @@ interface FastEthernet0/3
  dot1x pae authenticator
 !
 interface FastEthernet0/4
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -335,6 +339,7 @@ interface FastEthernet0/4
  dot1x pae authenticator
 !
 interface FastEthernet0/5
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -342,6 +347,7 @@ interface FastEthernet0/5
  dot1x pae authenticator
 !
 interface FastEthernet0/6
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -349,6 +355,7 @@ interface FastEthernet0/6
  dot1x pae authenticator
 !
 interface FastEthernet0/7
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -356,6 +363,7 @@ interface FastEthernet0/7
  dot1x pae authenticator
 !
 interface FastEthernet0/8
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -363,6 +371,7 @@ interface FastEthernet0/8
  dot1x pae authenticator
 !
 interface FastEthernet0/9
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -370,6 +379,7 @@ interface FastEthernet0/9
  dot1x pae authenticator
 !
 interface FastEthernet0/10
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -377,6 +387,7 @@ interface FastEthernet0/10
  dot1x pae authenticator
 !
 interface FastEthernet0/11
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -384,6 +395,7 @@ interface FastEthernet0/11
  dot1x pae authenticator
 !
 interface FastEthernet0/12
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -391,6 +403,7 @@ interface FastEthernet0/12
  dot1x pae authenticator
 !
 interface FastEthernet0/13
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -398,6 +411,7 @@ interface FastEthernet0/13
  dot1x pae authenticator
 !
 interface FastEthernet0/14
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -405,6 +419,7 @@ interface FastEthernet0/14
  dot1x pae authenticator
 !
 interface FastEthernet0/15
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -412,6 +427,7 @@ interface FastEthernet0/15
  dot1x pae authenticator
 !
 interface FastEthernet0/16
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -419,6 +435,7 @@ interface FastEthernet0/16
  dot1x pae authenticator
 !
 interface FastEthernet0/17
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -426,6 +443,7 @@ interface FastEthernet0/17
  dot1x pae authenticator
 !
 interface FastEthernet0/18
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -433,6 +451,7 @@ interface FastEthernet0/18
  dot1x pae authenticator
 !
 interface FastEthernet0/19
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -440,6 +459,7 @@ interface FastEthernet0/19
  dot1x pae authenticator
 !
 interface FastEthernet0/20
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -447,6 +467,7 @@ interface FastEthernet0/20
  dot1x pae authenticator
 !
 interface FastEthernet0/21
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -454,6 +475,7 @@ interface FastEthernet0/21
  dot1x pae authenticator
 !
 interface FastEthernet0/22
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -461,6 +483,7 @@ interface FastEthernet0/22
  dot1x pae authenticator
 !
 interface FastEthernet0/23
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -468,6 +491,7 @@ interface FastEthernet0/23
  dot1x pae authenticator
 !
 interface FastEthernet0/24
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -475,6 +499,7 @@ interface FastEthernet0/24
  dot1x pae authenticator
 !
 interface FastEthernet0/25
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -482,6 +507,7 @@ interface FastEthernet0/25
  dot1x pae authenticator
 !
 interface FastEthernet0/26
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -489,6 +515,7 @@ interface FastEthernet0/26
  dot1x pae authenticator
 !
 interface FastEthernet0/27
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -496,6 +523,7 @@ interface FastEthernet0/27
  dot1x pae authenticator
 !
 interface FastEthernet0/28
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -503,6 +531,7 @@ interface FastEthernet0/28
  dot1x pae authenticator
 !
 interface FastEthernet0/29
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -510,6 +539,7 @@ interface FastEthernet0/29
  dot1x pae authenticator
 !
 interface FastEthernet0/30
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -517,6 +547,7 @@ interface FastEthernet0/30
  dot1x pae authenticator
 !
 interface FastEthernet0/31
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -524,6 +555,7 @@ interface FastEthernet0/31
  dot1x pae authenticator
 !
 interface FastEthernet0/32
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -531,6 +563,7 @@ interface FastEthernet0/32
  dot1x pae authenticator
 !
 interface FastEthernet0/33
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -538,6 +571,7 @@ interface FastEthernet0/33
  dot1x pae authenticator
 !
 interface FastEthernet0/34
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -545,6 +579,7 @@ interface FastEthernet0/34
  dot1x pae authenticator
 !
 interface FastEthernet0/35
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -552,6 +587,7 @@ interface FastEthernet0/35
  dot1x pae authenticator
 !
 interface FastEthernet0/36
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -559,6 +595,7 @@ interface FastEthernet0/36
  dot1x pae authenticator
 !
 interface FastEthernet0/37
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -566,6 +603,7 @@ interface FastEthernet0/37
  dot1x pae authenticator
 !
 interface FastEthernet0/38
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -573,6 +611,7 @@ interface FastEthernet0/38
  dot1x pae authenticator
 !
 interface FastEthernet0/39
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40
@@ -580,6 +619,7 @@ interface FastEthernet0/39
  dot1x pae authenticator
 !
 interface FastEthernet0/40
+ switchport access vlan 20
  switchport mode access
  authentication event fail action authorize vlan 40
  authentication event no-response action authorize vlan 40

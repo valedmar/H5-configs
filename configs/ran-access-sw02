@@ -43,10 +43,10 @@
 !
 !Flash: Directory of flash:/
 !Flash:        drwx         256   Mar 1 1993 00:07:31 +00:00  c2960-lanbasek9-mz.150-2.SE4
-!Flash:        -rwx        2193   Mar 1 1993 22:00:53 +00:00  config.text
+!Flash:        -rwx        6644  Mar 10 1993 03:19:22 +00:00  config.text
 !Flash:        -rwx        1694   Mar 2 1993 23:53:43 +00:00  downloads
 !Flash:        -rwx         667   Mar 1 1993 00:03:36 +00:00  express_setup.debug
-!Flash:        -rwx        5490   Mar 1 1993 22:00:53 +00:00  private-config.text
+!Flash:        -rwx        5490  Mar 10 1993 03:19:22 +00:00  private-config.text
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (15 MB free)
 !
@@ -56,7 +56,7 @@
 !Flash: nvram: ----          35                    <no date>  persistent-data
 !Flash: nvram: ----                                <no date>  private-config
 !Flash: nvram: -rw-                                <no date>  startup-config
-!Flash: nvram: 64 KB total (83% free)
+!Flash: nvram: 64 KB total (76% free)
 !
 !
 !NAME: "1",                     DESCR: "WS-C2960-24TC-L"
@@ -112,7 +112,7 @@
 !VTP: MD5 digest                        : 0xBA 0xB2 0x8A 0x0D 0xE4 0xD0 0x6F 0x99 
 !VTP:                                     0x0B 0x84 0x55 0xAC 0x09 0x8A 0x5E 0xE3 
 !
-!DOT1x: Sysauthcontrol             Disabled
+!DOT1x: Sysauthcontrol              Enabled
 !DOT1x: Dot1x Protocol Version            3
 !
 !VLAN: VLAN Name                             Status    Ports
@@ -173,7 +173,9 @@ aaa group server radius nps
  server-private 10.1.20.5 auth-port 1812 acct-port 1813 key htrfdsfGTHTEd.
 !
 aaa authentication login default group nps local
+aaa authentication dot1x default group nps
 aaa authorization exec default group nps local 
+aaa authorization network default group nps 
 !
 aaa session-id common
 system mtu routing 1500
@@ -207,6 +209,7 @@ crypto pki certificate chain TP-self-signed-246753664
   A0521FDE 1A5B0290 78DAB2AC 4363744A 6643AA60 A55A11E7 5CC79C98 2A5F2F92 
   EE734B90 36B50717 5924D130 62
   	quit
+dot1x system-auth-control
 !
 spanning-tree mode pvst
 spanning-tree extend system-id
@@ -224,48 +227,158 @@ interface FastEthernet0/2
  switchport mode access
 !
 interface FastEthernet0/3
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/4
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/5
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/6
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/7
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/8
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/9
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/10
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/11
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/12
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/13
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/14
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/15
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/16
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/17
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/18
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/19
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/20
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/21
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/22
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/23
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface FastEthernet0/24
+ switchport mode access
+ authentication event fail action authorize vlan 40
+ authentication event no-response action authorize vlan 40
+ authentication port-control auto
+ dot1x pae authenticator
 !
 interface GigabitEthernet0/1
  switchport mode trunk

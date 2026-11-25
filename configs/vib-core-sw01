@@ -41,9 +41,9 @@
 !
 !Flash: Directory of flash:/
 !Flash:        -rwx    12746112   Jan 1 1970 00:38:06 +00:00  c3560-ipservicesk9-mz.122-55.SE12.bin
-!Flash:        -rwx        5336  Mar 10 1993 01:08:18 +00:00  config.text
+!Flash:        -rwx        6005  Mar 10 1993 03:16:05 +00:00  config.text
 !Flash:        -rwx        1389   Mar 1 1993 00:09:06 +00:00  config.text.renamed
-!Flash:        -rwx        5501  Mar 10 1993 01:08:18 +00:00  private-config.text
+!Flash:        -rwx        5501  Mar 10 1993 03:16:05 +00:00  private-config.text
 !Flash:        -rwx          24   Mar 1 1993 00:09:06 +00:00  private-config.text.renamed
 !Flash:        -rwx                                           vlan.dat
 !Flash: 32514048 bytes total (18 MB free)
@@ -320,27 +320,27 @@ interface Vlan1
 !
 interface Vlan10
  ip address 10.1.8.2 255.255.252.0
- ip access-group VLAN10-IN in
+ ip access-group VLAN10-OUT out
  ip helper-address 10.1.20.4
  ip helper-address 10.2.20.4
  standby 1 ip 10.1.8.1
 !
 interface Vlan20
  ip address 10.1.20.2 255.255.255.0
- ip access-group VLAN20-IN in
+ ip access-group VLAN20-OUT out
  ip helper-address 10.2.20.4
  standby 1 ip 10.1.20.1
 !
 interface Vlan30
  ip address 10.1.30.2 255.255.255.0
- ip access-group VLAN30-IN in
+ ip access-group VLAN30-OUT out
  ip helper-address 10.1.20.4
  ip helper-address 10.2.20.4
  standby 1 ip 10.1.30.1
 !
 interface Vlan40
  ip address 10.1.40.2 255.255.255.0
- ip access-group VLAN40-IN in
+ ip access-group VLAN40-OUT out
  ip helper-address 10.1.20.4
  ip helper-address 10.2.20.4
  standby 1 ip 10.1.40.1
@@ -363,45 +363,55 @@ ip route 0.0.0.0 0.0.0.0 10.1.0.1
 ip http server
 ip http secure-server
 !
-ip access-list extended VLAN10-IN
- permit ip 10.1.8.0 0.0.3.255 any
- permit ip 10.1.20.0 0.0.0.255 any
- permit ip 10.1.99.0 0.0.0.255 any
- permit ip 10.2.8.0 0.0.3.255 any
- permit ip 10.2.99.0 0.0.0.255 any
- deny   ip 10.0.0.0 0.255.255.255 any
- deny   ip 172.16.0.0 0.0.255.255 any
- deny   ip 192.168.0.0 0.0.255.255 any
- permit ip any any
-ip access-list extended VLAN20-IN
- permit ip 10.1.20.0 0.0.0.255 any
- permit ip 10.2.20.0 0.0.0.255 any
- permit ip 10.1.8.0 0.0.3.255 any
- permit ip 10.2.8.0 0.0.3.255 any
- permit ip 10.1.99.0 0.0.0.255 any
- permit ip 10.2.99.0 0.0.0.255 any
- deny   ip 10.0.0.0 0.255.255.255 any
- deny   ip 172.16.0.0 0.0.255.255 any
- deny   ip 192.168.0.0 0.0.255.255 any
- permit ip any any
-ip access-list extended VLAN30-IN
- permit ip 10.1.30.0 0.0.0.255 any
- permit ip 10.1.99.0 0.0.0.255 any
- permit ip 10.2.30.0 0.0.0.255 any
- permit ip 10.2.99.0 0.0.0.255 any
- deny   ip 10.0.0.0 0.255.255.255 any
- deny   ip 172.16.0.0 0.0.255.255 any
- deny   ip 192.168.0.0 0.0.255.255 any
- permit ip any any
-ip access-list extended VLAN40-IN
- permit ip 10.1.40.0 0.0.0.255 any
- permit ip 10.2.40.0 0.0.0.255 any
- permit ip 10.1.99.0 0.0.0.255 any
- permit ip 10.2.99.0 0.0.0.255 any
- deny   ip 10.0.0.0 0.255.255.255 any
- deny   ip 172.16.0.0 0.0.255.255 any
- deny   ip 192.168.0.0 0.0.255.255 any
- permit ip any any
+ip access-list extended VLAN10-OUT
+ remark --- SITE 2 ---
+ permit ip 10.2.8.0 0.0.3.255 10.1.8.0 0.0.3.255
+ remark --- VLAN 20 ---
+ permit ip 10.1.20.0 0.0.0.255 10.1.8.0 0.0.3.255
+ permit ip 10.2.20.0 0.0.0.255 10.1.8.0 0.0.3.255
+ remark --- DHCP ---
+ permit udp host 10.1.20.4 eq bootps 10.1.8.0 0.0.3.255 eq bootpc
+ remark --- Anti Spoof ---
+ deny   ip 10.0.0.0 0.255.255.255 10.1.8.0 0.0.3.255
+ deny   ip 172.16.0.0 0.0.255.255 10.1.8.0 0.0.3.255
+ deny   ip 192.168.0.0 0.0.255.255 10.1.8.0 0.0.3.255
+ remark --- internet ---
+ permit ip any 10.1.8.0 0.0.3.255
+ip access-list extended VLAN20-OUT
+ remark --- VLAN10 ---
+ permit ip 10.1.8.0 0.0.3.255 10.1.20.0 0.0.0.255
+ permit ip 10.2.8.0 0.0.3.255 10.1.20.0 0.0.0.255
+ remark --- VLAN99 ---
+ permit ip 10.1.99.0 0.0.0.255 10.1.20.0 0.0.0.255
+ permit ip 10.2.99.0 0.0.0.255 10.1.20.0 0.0.0.255
+ remark --- Anti Spoofing ---
+ deny   ip 10.0.0.0 0.255.255.255 10.1.20.0 0.0.0.255
+ deny   ip 172.16.0.0 0.0.255.255 10.1.20.0 0.0.0.255
+ deny   ip 192.168.0.0 0.0.255.255 10.1.20.0 0.0.0.255
+ remark --- Internet ---
+ permit ip any 10.1.20.0 0.0.0.255
+ip access-list extended VLAN30-OUT
+ remark --- SITE 2 ---
+ permit ip 10.2.30.0 0.0.0.255 10.1.30.0 0.0.0.255
+ remark --- DHCP ---
+ permit udp host 10.1.20.4 eq bootps 10.1.30.0 0.0.0.255 eq bootpc
+ remark --- Anti Spoof ---
+ deny   ip 10.0.0.0 0.255.255.255 10.1.30.0 0.0.0.255
+ deny   ip 172.16.0.0 0.0.255.255 10.1.30.0 0.0.0.255
+ deny   ip 192.168.0.0 0.0.255.255 10.1.30.0 0.0.0.255
+ remark --- internet ---
+ permit ip any 10.1.30.0 0.0.0.255
+ip access-list extended VLAN40-OUT
+ remark --- SITE 2 ---
+ permit ip 10.2.40.0 0.0.0.255 10.1.40.0 0.0.0.255
+ remark --- DHCP ---
+ permit udp host 10.1.20.4 eq bootps 10.1.40.0 0.0.0.255 eq bootpc
+ remark --- Anti Spoof ---
+ deny   ip 10.0.0.0 0.255.255.255 10.1.40.0 0.0.0.255
+ deny   ip 172.16.0.0 0.0.255.255 10.1.40.0 0.0.0.255
+ deny   ip 192.168.0.0 0.0.255.255 10.1.40.0 0.0.0.255
+ remark --- internet ---
+ permit ip any 10.1.40.0 0.0.0.255
 !
 ip radius source-interface Vlan99 
 access-list 101 permit udp any any eq 1812
