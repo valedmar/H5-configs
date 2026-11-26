@@ -1,0 +1,146 @@
+Current configuration : 1980 bytes
+!
+version 15.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname PE02
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+ethernet lmi ce
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+!
+ip vrf Aserrest
+ rd 65000:1
+ route-target export 65000:1
+ route-target import 65000:1
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+license udi pid CISCO1921/K9 sn FCZ1746C434
+license accept end user agreement
+license boot module c1900 technology-package securityk9
+license boot module c1900 technology-package datak9
+!
+!
+!
+redundancy
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.0.0.3 255.255.255.255
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ ip vrf forwarding Aserrest
+ ip address 192.168.1.1 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ description P01
+ ip address 192.168.0.6 255.255.255.252
+ duplex auto
+ speed auto
+ mpls label protocol ldp
+ mpls ip
+!
+router ospf 1
+ router-id 10.0.0.3
+ network 10.0.0.3 0.0.0.0 area 0
+ network 192.168.0.4 0.0.0.3 area 0
+!
+router bgp 65000
+ bgp log-neighbor-changes
+ neighbor 10.0.0.1 remote-as 65000
+ neighbor 10.0.0.1 update-source Loopback0
+ neighbor 10.0.0.2 remote-as 65000
+ neighbor 10.0.0.2 update-source Loopback0
+ !
+ address-family vpnv4
+  neighbor 10.0.0.1 activate
+  neighbor 10.0.0.1 send-community extended
+ exit-address-family
+ !
+ address-family ipv4 vrf Aserrest
+  network 192.168.1.0 mask 255.255.255.252
+  neighbor 192.168.1.2 remote-as 65001
+  neighbor 192.168.1.2 activate
+ exit-address-family
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login
+ transport input none
+!
+scheduler allocate 20000 1000
+!
+end

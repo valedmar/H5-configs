@@ -1,0 +1,116 @@
+version 15.3
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname P01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+ip cef
+!
+!
+!
+!
+
+
+!
+!
+!
+!
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+license udi pid CISCO1921/K9 sn FCZ1746C442
+license boot module c1900 technology-package securityk9
+license boot module c1900 technology-package datak9
+!
+!
+!
+redundancy
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.0.0.2 255.255.255.255
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ description PE02
+ ip address 192.168.0.5 255.255.255.252
+ duplex auto
+ speed auto
+ mpls label protocol ldp
+ mpls ip
+!
+interface GigabitEthernet0/1
+ description PE01
+ ip address 192.168.0.1 255.255.255.252
+ duplex auto
+ speed auto
+ mpls label protocol ldp
+ mpls ip
+!
+router ospf 1
+ router-id 10.0.0.2
+ network 10.0.0.2 0.0.0.0 area 0
+ network 192.168.0.0 0.0.0.3 area 0
+ network 192.168.0.4 0.0.0.3 area 0
+!
+router bgp 65000
+ bgp log-neighbor-changes
+ neighbor 10.0.0.1 remote-as 65000
+ neighbor 10.0.0.1 update-source Loopback0
+ neighbor 10.0.0.3 remote-as 65000
+ neighbor 10.0.0.3 update-source Loopback0
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login
+ transport input all
+!
+scheduler allocate 20000 1000
+!
+end
