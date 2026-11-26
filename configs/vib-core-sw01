@@ -110,9 +110,9 @@
 !VTP: VTP Operating Mode                : Server
 !VTP: Maximum VLANs supported locally   : 1005
 !VTP: Number of existing VLANs          : 11
-!VTP: Configuration Revision            : 1
-!VTP: MD5 digest                        : 0x30 0x14 0x02 0xA8 0x7D 0x89 0xDD 0xEE 
-!VTP:                                     0x79 0xB6 0x1E 0x6C 0x39 0xF0 0xC4 0xB3 
+!VTP: Configuration Revision            : 2
+!VTP: MD5 digest                        : 0xA8 0xDC 0xDF 0x6A 0x36 0x75 0xFE 0x12 
+!VTP:                                     0x01 0xF1 0x1A 0xA9 0x0E 0x99 0x91 0xA9 
 !
 !DOT1x: Sysauthcontrol             Disabled
 !DOT1x: Dot1x Protocol Version            3
@@ -126,7 +126,7 @@
 !VLAN: 20   Server                           active    Gi0/1
 !VLAN: 30   IoT                              active    
 !VLAN: 40   VLAN0040                         active    
-!VLAN: 98   VLAN0098                         active    
+!VLAN: 98   WifiManagement                   active    
 !VLAN: 99   Management                       active    
 !VLAN: 1002 fddi-default                     act/unsup 
 !VLAN: 1003 token-ring-default               act/unsup 
